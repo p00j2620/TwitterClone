@@ -12,6 +12,9 @@
 		00E9A6131F56153100994DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E9A6111F56153100994DDC /* LaunchScreen.storyboard */; };
 		00E9A61E1F56153100994DDC /* TwitterCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9A61D1F56153100994DDC /* TwitterCloneTests.swift */; };
 		00E9A62C1F56264E00994DDC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9A62B1F56264E00994DDC /* HomeController.swift */; };
+		00FE4AD61F56F7A700D2F56C /* HomeDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE4AD51F56F7A700D2F56C /* HomeDataSourceController.swift */; };
+		00FE4AD81F57021000D2F56C /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE4AD71F57021000D2F56C /* Cells.swift */; };
+		00FE4ADA1F57028D00D2F56C /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE4AD91F57028D00D2F56C /* HomeDataSource.swift */; };
 		3596AC1816EDAFE6646E124B /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D501571D1983231FB4561487 /* Pods_TwitterClone.framework */; };
 		3EB07020BA654DD928BD2E83 /* Pods_TwitterCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578A5575D617CC89B67A4E2A /* Pods_TwitterCloneTests.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,9 @@
 		00E9A61D1F56153100994DDC /* TwitterCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCloneTests.swift; sourceTree = "<group>"; };
 		00E9A61F1F56153100994DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E9A62B1F56264E00994DDC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		00FE4AD51F56F7A700D2F56C /* HomeDataSourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSourceController.swift; sourceTree = "<group>"; };
+		00FE4AD71F57021000D2F56C /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		00FE4AD91F57028D00D2F56C /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		251863CD920E93633B5FF7E6 /* Pods-TwitterCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterCloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterCloneTests/Pods-TwitterCloneTests.release.xcconfig"; sourceTree = "<group>"; };
 		46CA1A2C296A0BD0BC698A76 /* Pods-TwitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClone/Pods-TwitterClone.debug.xcconfig"; sourceTree = "<group>"; };
 		578A5575D617CC89B67A4E2A /* Pods_TwitterCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,9 +73,6 @@
 		00E9A5FC1F56153100994DDC = {
 			isa = PBXGroup;
 			children = (
-				00E9A62A1F56262800994DDC /* Controller */,
-				00E9A6291F56261D00994DDC /* Model */,
-				00E9A6281F56261400994DDC /* View */,
 				00E9A6071F56153100994DDC /* TwitterClone */,
 				00E9A61C1F56153100994DDC /* TwitterCloneTests */,
 				00E9A6061F56153100994DDC /* Products */,
@@ -90,6 +93,9 @@
 		00E9A6071F56153100994DDC /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				00E9A62A1F56262800994DDC /* Controller */,
+				00E9A6291F56261D00994DDC /* Model */,
+				00E9A6281F56261400994DDC /* View */,
 				00E9A6081F56153100994DDC /* AppDelegate.swift */,
 				00E9A60F1F56153100994DDC /* Assets.xcassets */,
 				00E9A6111F56153100994DDC /* LaunchScreen.storyboard */,
@@ -110,6 +116,7 @@
 		00E9A6281F56261400994DDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00FE4AD71F57021000D2F56C /* Cells.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +124,7 @@
 		00E9A6291F56261D00994DDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				00FE4AD91F57028D00D2F56C /* HomeDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				00E9A62B1F56264E00994DDC /* HomeController.swift */,
+				00FE4AD51F56F7A700D2F56C /* HomeDataSourceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,8 +357,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FE4ADA1F57028D00D2F56C /* HomeDataSource.swift in Sources */,
 				00E9A6091F56153100994DDC /* AppDelegate.swift in Sources */,
+				00FE4AD81F57021000D2F56C /* Cells.swift in Sources */,
 				00E9A62C1F56264E00994DDC /* HomeController.swift in Sources */,
+				00FE4AD61F56F7A700D2F56C /* HomeDataSourceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +581,7 @@
 				00E9A6241F56153100994DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00E9A6251F56153100994DDC /* Build configuration list for PBXNativeTarget "TwitterCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +590,7 @@
 				00E9A6271F56153100994DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

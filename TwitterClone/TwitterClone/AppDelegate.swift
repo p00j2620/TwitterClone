@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window?.makeKeyAndVisible()
 		
 		// Creating and setting homeController as root VC
-		let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
-		window?.rootViewController = UINavigationController(rootViewController: homeController)
+		window?.rootViewController = UINavigationController(rootViewController: HomeDataSoureController())
 		
 		return true
 	}
